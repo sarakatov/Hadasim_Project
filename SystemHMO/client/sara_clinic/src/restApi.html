@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>REST API</title>
+    <style>
+         table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body dir="rtl">
+
+    <h2>REST API</h2>
+
+    <h2>members</h2>
+    <table>
+        <tr>
+            <th> הפעולה </th>
+            <th> הסבר </th>
+            <th> method </th>
+            <th> body </th>
+            <th> url address </th>
+            <th>   params </th>
+        </tr>
+        <tr>
+            <td>getAllMembers</td>
+            <td>returns all members from the DB</td>
+            <td>GET</td>
+            <td>-</td>
+            <td>/api/members</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>getMemberById</td>
+            <td>returns member by id</td>
+            <td>GET</td>
+            <td>-</td>
+            <td>/api/members/:id</td>
+            <td> id</td>
+        </tr>
+        <tr>
+            <td>deleteMember</td>
+            <td>delete member from the DB</td>
+            <td>DELETE</td>
+            <td>-</td>
+            <td>/api/members/:id</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>addMember</td>
+            <td>add member to DB</td>
+            <td>POST</td>
+            <td>id,firstName,lastName,city,street,numHouse,birthDate,phone/mobilePhone</td>
+            <td>/api/members</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>updateMember</td>
+            <td>update member</td>
+            <td>PUT</td>
+            <td>(לא חובה)</td>
+            <td>/api/members/:d</td>
+            <td>id</td>
+        </tr>
+    </table>
+    <h2>bonus</h2>
+    <table>
+        <tr>
+            <th> הפעולה </th>
+            <th> הסבר </th>
+            <th> method </th>
+            <th> body </th>
+            <th> url address </th>
+            <th>   params </th>
+        </tr>
+        <tr>
+            <td>getNumUsersSickThisMonth</td>
+            <td>returns number of sick members for each day of the last month</td>
+            <td>GET</td>
+            <td>-</td>
+            <td>/api/bonus/getNumUsersSickThisMonth</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>getNumMembersNoVaccine</td>
+            <td>Returns the number of unvaccinated members</td>
+            <td>GET</td>
+            <td>-</td>
+            <td>/api/bonus/getNumMembersNoVaccine</td>
+            <td>-</td>
+        </tr>
+         
+    </table>
+
+</body>
+</html>
